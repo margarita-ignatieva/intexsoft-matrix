@@ -1,11 +1,12 @@
 package by.intexsoft.ignatieva;
 
-import java.util.Arrays;
-
 public class Printer {
     public static void print(int[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
-            System.out.println(Arrays.toString(matrix[i]));
+        for (int row = 0; row < matrix.length; row++) {
+            for (int column = 0; column < matrix[row].length; column++) {
+                System.out.print(String.format("%10s", matrix[row][column]));
+            }
+            System.out.println();
         }
     }
 }
